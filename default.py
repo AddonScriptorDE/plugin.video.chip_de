@@ -23,7 +23,6 @@ def index():
             title=match[0]
             addDir(string.upper(title),url+"&of=0",1,thumb)
         xbmcplugin.endOfDirectory(pluginhandle)
-        if (xbmc.getSkinDir() == "skin.confluence" or xbmc.getSkinDir() == "skin.touched"): xbmc.executebuiltin('Container.SetViewMode(500)')
 
 def listVideos(url):
         content = getUrl(url)
@@ -42,7 +41,6 @@ def listVideos(url):
             url=match[0]
             addDir("Next Page",url,1,"")
         xbmcplugin.endOfDirectory(pluginhandle)
-        if (xbmc.getSkinDir() == "skin.confluence" or xbmc.getSkinDir() == "skin.touched"): xbmc.executebuiltin('Container.SetViewMode(500)')
 
 def playVideo(url):
         content = getUrl(url)
